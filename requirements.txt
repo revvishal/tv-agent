@@ -1,0 +1,5 @@
+playwright==1.47.0
+PyYAML==6.0.2
+requests==2.32.3
+python-dotenv==1.0.1
+python-dateutil==2.9.0.post0

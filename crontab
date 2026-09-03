@@ -1,0 +1,5 @@
+# Runs the agent once a day at 06:00 UTC. Edit this line to change the
+# schedule (standard 5-field cron syntax), then rebuild the image.
+0 6 * * * root . /app/container.env 2>/dev/null; cd /app && /usr/local/bin/python -m src.main >> /var/log/tv-agent.log 2>&1
+
+# Cron requires a trailing newline.

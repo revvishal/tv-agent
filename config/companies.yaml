@@ -1,0 +1,15 @@
+# List every company you want the agent to process.
+#
+# ticker      -> the code used in YOUR REST API's URL, e.g. /api/financials/{ticker}
+# tv_symbol   -> TradingView's symbol id, i.e. the part after /symbols/ in the URL
+#                e.g. https://www.tradingview.com/symbols/NSE-APARINDS/... -> "NSE-APARINDS"
+# company     -> display name sent in the payload
+
+companies:
+  - ticker: ACC
+    tv_symbol: NSE-ACC
+    company: ACC Ltd
+
+  - ticker: APARINDS
+    tv_symbol: NSE-APARINDS
+    company: Apar Industries Ltd
