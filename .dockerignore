@@ -1,0 +1,24 @@
+# Ignore python virtual environments
+venv/
+.venv/
+env/
+
+# Ignore local caches and logs
+__pycache__/
+*.pyc
+*.log
+.pytest_cache/
+.mypy_cache/
+
+# Ignore Git directory and environment secrets
+.git
+.gitignore
+.env
+.env.*
+
+# Ignore local media files or data downloads
+*.mp4
+*.mkv
+*.json
+data/
+downloads/
