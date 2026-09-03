@@ -6,10 +6,222 @@
 # company     -> display name sent in the payload
 
 companies:
+  - ticker: 360ONE
+    tv_symbol: NSE-360ONE
+    company: 360 ONE WAM Ltd
+
   - ticker: ACC
     tv_symbol: NSE-ACC
     company: ACC Ltd
 
+  - ticker: ANANTRAJ
+    tv_symbol: NSE-ANANTRAJ
+    company: Anant Raj Ltd
+
+  - ticker: BAJFINANCE
+    tv_symbol: NSE-BAJFINANCE
+    company: Bajaj Finance Ltd
+
+  - ticker: DIXON
+    tv_symbol: NSE-DIXON
+    company: Dixon Technologies (India) Ltd
+
+  - ticker: HAL
+    tv_symbol: NSE-HAL
+    company: Hindustan Aeronautics Ltd
+
+  - ticker: INNOVACAP
+    tv_symbol: NSE-INNOVACAP
+    company: Innova Captab Ltd
+
+  - ticker: JAYBEE
+    tv_symbol: NSE-JAYBEE
+    company: Jay Bee Laminations Ltd
+
+  - ticker: MANAPPURAM
+    tv_symbol: NSE-MANAPPURAM
+    company: Manappuram Finance Ltd
+
+  - ticker: MOSCHIP
+    tv_symbol: NSE-MOSCHIP
+    company: MosChip Technologies Ltd
+
+  - ticker: MOTILALOFS
+    tv_symbol: NSE-MOTILALOFS
+    company: Motilal Oswal Financial Services Ltd
+
+  - ticker: NUVAMA
+    tv_symbol: NSE-NUVAMA
+    company: Nuvama Wealth Management Ltd
+
+  - ticker: OPTIEMUS
+    tv_symbol: NSE-OPTIEMUS
+    company: Optiemus Infracom Ltd
+
+  - ticker: PERSISTENT
+    tv_symbol: NSE-PERSISTENT
+    company: Persistent Systems Ltd
+
+  - ticker: PGEL
+    tv_symbol: NSE-PGEL
+    company: PG Electroplast Ltd
+
+  - ticker: RELIANCE
+    tv_symbol: NSE-RELIANCE
+    company: Reliance Industries Ltd
+
+  - ticker: SHILCTECH
+    tv_symbol: BSE-SHILCTECH
+    company: Shilchar Technologies Ltd
+
+  - ticker: SWSOLAR
+    tv_symbol: NSE-SWSOLAR
+    company: Sterling and Wilson Renewable Energy Ltd
+
+  - ticker: TATAPOWER
+    tv_symbol: NSE-TATAPOWER
+    company: Tata Power Company Ltd
+
+  - ticker: ZAGGLE
+    tv_symbol: NSE-ZAGGLE
+    company: Zaggle Prepaid Ocean Services Ltd
+
+  - ticker: CEMPRO
+    tv_symbol: NSE-CEMPRO
+    company: Cemindia Projects Ltd
+
+  - ticker: TVSMOTOR
+    tv_symbol: NSE-TVSMOTOR
+    company: TVS Motor Company Ltd
+
+  - ticker: M&M
+    tv_symbol: NSE-M&M
+    company: Mahindra & Mahindra Ltd
+
+  - ticker: VBL
+    tv_symbol: NSE-VBL
+    company: Varun Beverages Ltd
+
+  - ticker: HDFCBANK
+    tv_symbol: NSE-HDFCBANK
+    company: HDFC Bank Ltd
+
+  - ticker: SILVERBEES
+    tv_symbol: NSE-SILVERBEES
+    company: Nippon India Silver ETF
+
+  - ticker: GOLDBEES
+    tv_symbol: NSE-GOLDBEES
+    company: Nippon India ETF Gold BeES
+
+  - ticker: TITAN
+    tv_symbol: NSE-TITAN
+    company: Titan Company Ltd
+
+  - ticker: HINDCOPPER
+    tv_symbol: NSE-HINDCOPPER
+    company: Hindustan Copper Ltd
+
+  - ticker: MUTHOOTFIN
+    tv_symbol: NSE-MUTHOOTFIN
+    company: Muthoot Finance Ltd
+
+  - ticker: CDSL
+    tv_symbol: NSE-CDSL
+    company: Central Depository Services (India) Ltd
+
+  - ticker: CHENNPETRO
+    tv_symbol: NSE-CHENNPETRO
+    company: Chennai Petroleum Corporation Ltd
+
+  - ticker: POWERINDIA
+    tv_symbol: NSE-POWERINDIA
+    company: Hitachi Energy India Ltd
+
   - ticker: APARINDS
     tv_symbol: NSE-APARINDS
     company: Apar Industries Ltd
+
+  - ticker: NETWEB
+    tv_symbol: NSE-NETWEB
+    company: Netweb Technologies India Ltd
+
+  - ticker: STLTECH
+    tv_symbol: NSE-STLTECH
+    company: Sterlite Technologies Ltd
+
+  - ticker: MTARTECH
+    tv_symbol: NSE-MTARTECH
+    company: MTAR Technologies Ltd
+
+  - ticker: APLAPOLLO
+    tv_symbol: NSE-APLAPOLLO
+    company: APL Apollo Tubes Ltd
+
+  - ticker: BEL
+    tv_symbol: NSE-BEL
+    company: Bharat Electronics Ltd
+
+  - ticker: DEEPAKFERT
+    tv_symbol: NSE-DEEPAKFERT
+    company: Deepak Fertilisers and Petrochemicals Corporation Ltd
+
+  - ticker: GANECOS
+    tv_symbol: NSE-GANECOS
+    company: Garware Technical Fibres Ltd
+
+  - ticker: ICEMAKE
+    tv_symbol: NSE-ICEMAKE
+    company: Ice Make Refrigeration Ltd
+
+  - ticker: ICICIBANK
+    tv_symbol: NSE-ICICIBANK
+    company: ICICI Bank Ltd
+
+  - ticker: IREDA
+    tv_symbol: NSE-IREDA
+    company: Indian Renewable Energy Development Agency Ltd
+
+  - ticker: LT
+    tv_symbol: NSE-LT
+    company: Larsen & Toubro Ltd
+
+  - ticker: JASH
+    tv_symbol: NSE-JASH
+    company: Jash Engineering Ltd
+
+  - ticker: LTTS
+    tv_symbol: NSE-LTTS
+    company: L&T Technology Services Ltd
+
+  - ticker: MAZDOCK
+    tv_symbol: NSE-MAZDOCK
+    company: Mazagon Dock Shipbuilders Ltd
+
+  - ticker: NEWGEN
+    tv_symbol: NSE-NEWGEN
+    company: Newgen Software Technologies Ltd
+
+  - ticker: SUNPHARMA
+    tv_symbol: NSE-SUNPHARMA
+    company: Sun Pharmaceutical Industries Ltd
+
+  - ticker: TATAMOTORS
+    tv_symbol: NSE-TATAMOTORS
+    company: Tata Motors Ltd
+
+  - ticker: VOLTAMP
+    tv_symbol: NSE-VOLTAMP
+    company: Voltamp Transformers Ltd
+
+  - ticker: VPRPL
+    tv_symbol: NSE-VPRPL
+    company: VPRPL Ltd
+
+  - ticker: WOCKPHARMA
+    tv_symbol: NSE-WOCKPHARMA
+    company: Wockhardt Ltd
+
+  - ticker: TMCV
+    tv_symbol: NSE-TMCV
+    company: Tata Motors Commercial Vehicles Ltd

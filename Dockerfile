@@ -37,6 +37,7 @@ RUN chmod +x /entrypoint.sh
 # Copy ONLY your python application code (prevents uploading heavy local junk)
 COPY *.py ./
 # Note: If you have specific source folders, copy them explicitly like:
-# COPY src/ ./src/
+COPY src/ ./src/
+COPY config/ ./config/
 
 CMD ["/entrypoint.sh"]

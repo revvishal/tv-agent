@@ -75,6 +75,31 @@ docker run -d --name tv-agent \
   tv-agent
 ```
 
+### Run with Docker locally
+
+```bash
+docker build -t tv-agent .
+docker run -d --name tv-agent --env-file .env tv-agent
+docker logs -f tv-agent
+```
+-d runs it detached in the background (matches its cron-worker design); drop -d if you want to watch it run in your terminal directly.
+
+If you just want a single one-off run (no cron loop, container exits when done) — useful for testing before you commit to the scheduled version:
+```bash
+docker run --rm --env-file .env tv-agent python -m src.main
+```
+To stop/remove the scheduled version:
+```bash
+docker stop tv-agent && docker rm tv-agent
+```
+### Run with Docker locally with debug folder 
+
+```bash
+docker build -t tv-agent .
+mkdir -p debug
+docker run --rm --env-file .env -v "$(pwd)/debug:/app/debug" tv-agent python -m src.main
+```
+
 The container runs the pipeline once immediately on startup, then again
 daily at 06:00 UTC via cron. Check logs with:
 
