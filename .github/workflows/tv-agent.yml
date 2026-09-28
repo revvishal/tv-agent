@@ -19,8 +19,7 @@ jobs:
       - run: python -m src.main   # replace with the command your crontab runs
         env:
           # move your secrets to GitHub → Settings → Secrets
-          SOME_API_KEY: ${{ secrets.SOME_API_KEY }}
-          API_BASE_URL: ${{ secrets.SOME_API_KEY }}
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
           JWT_TOKEN: ${{ secrets.JWT_TOKEN }}
           REQUEST_DELAY_SECONDS: ${{ secrets.REQUEST_DELAY_SECONDS }}
           PLAYWRIGHT_HEADED: ${{ secrets.PLAYWRIGHT_HEADED }}
