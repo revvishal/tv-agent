@@ -50,6 +50,20 @@ technically, but:
   If TradingView's headers do include a full date on the live page, it will
   be used as-is — check a debug dump (below) to confirm.
 
+## Actual Production setup Run 
+
+```bash
+#This is triggered and executed using GitHub Actions using below config file. Vercel is not required.
+.github/workflows/tv-agent.yml
+#this can be manually triggered using GitHub->Action->tv-agent workflow. 
+#Also it's scheduled with Cron to run once every 15 days. You can easily see the execution in run Logs
+
+#The required environment variables are added in GitHub repo as settings->secrets->Production Envi 
+#and the Workflow is also configured to run as Production Envi    
+```
+
+![img.png](img.png)
+
 ## Setup
 
 ```bash
@@ -146,6 +160,7 @@ entrypoint.sh           # containerize + schedule with cron
   through `QuarterRow`, and add it to the payload in `src/transform.py`.
 - **More companies**: just add entries to `config/companies.yaml`.
 - **Different schedule**: edit `crontab`.
-- **Alerting on failure**: `src/main.py` already logs and exits with status
-  `1` if any company fails — wire that exit code into your cloud
-  scheduler's alerting (e.g. a failed cron job notification).
+- **Alerting on failure**: `src/main.py` logs failed tickers as warnings and
+  still exits `0` unless more than 50% of tickers fail (then it logs an
+  error and exits `1`). Wire that exit code into your cloud scheduler's
+  alerting (e.g. a failed cron job notification).

@@ -61,7 +61,11 @@ async def run() -> int:
             try:
                 await process_company(page, settings, company)
             except Exception:
-                logger.exception("[%s] FAILED - continuing with next company", company.ticker)
+                logger.warning(
+                    "[%s] FAILED - continuing with next company",
+                    company.ticker,
+                    exc_info=True,
+                )
                 failures.append(company.ticker)
 
             # Politeness delay between companies. Skip after the last one.
@@ -71,11 +75,26 @@ async def run() -> int:
 
         await browser.close()
 
-    if failures:
-        logger.error("Completed with failures: %s", ", ".join(failures))
+    total = len(companies)
+    failed = len(failures)
+    if not failures:
+        logger.info("All %d companies processed successfully.", total)
+        return 0
+
+    failure_rate = failed / total if total else 0
+    summary = (
+        f"Completed with {failed}/{total} ticker failure(s): {', '.join(failures)}"
+    )
+    if failure_rate > 0.5:
+        logger.error(summary)
         return 1
 
-    logger.info("All %d companies processed successfully.", len(companies))
+    logger.warning(summary)
+    logger.info(
+        "Treating run as success (%d/%d tickers succeeded; failure threshold is >50%%).",
+        total - failed,
+        total,
+    )
     return 0
 
 
