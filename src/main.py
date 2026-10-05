@@ -33,11 +33,30 @@ USER_AGENT = (
 
 
 async def process_company(page, settings: Settings, company: Company) -> bool:
+    # If a scrape fails we still push the payload, with 0 / "" defaults
+    # instead of null/NA, so the API never receives missing values.
+    quarters = None
+    forecast = None
+
     logger.info("[%s] Scraping financials...", company.ticker)
-    quarters = await scrape_financials(page, company, settings.debug)
+    try:
+        quarters = await scrape_financials(page, company, settings.debug)
+    except Exception:
+        logger.warning(
+            "[%s] Financials scrape failed - using default values (0 / empty)",
+            company.ticker,
+            exc_info=True,
+        )
 
     logger.info("[%s] Scraping forecast / analyst rating...", company.ticker)
-    forecast = await scrape_forecast(page, company, settings.debug)
+    try:
+        forecast = await scrape_forecast(page, company, settings.debug)
+    except Exception:
+        logger.warning(
+            "[%s] Forecast scrape failed - using default values (0 / empty)",
+            company.ticker,
+            exc_info=True,
+        )
 
     payload = build_payload(company, quarters, forecast)
 
@@ -94,7 +113,7 @@ async def run() -> int:
         "Treating run as success (%d/%d tickers succeeded; failure threshold is >50%%).",
         total - failed,
         total,
-    )
+        )
     return 0
 
 
