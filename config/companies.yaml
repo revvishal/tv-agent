@@ -225,3 +225,23 @@ companies:
   - ticker: TMCV
     tv_symbol: NSE-TMCV
     company: Tata Motors Commercial Vehicles Ltd
+    
+  - ticker: SIGMAADV
+    tv_symbol: NSE-SIGMAADV-BE
+    company: Sigma Advanced Systems Ltd
+
+  - ticker: BALKRISIND
+    tv_symbol: NSE-BALKRISIND
+    company: Balkrishna Industries Ltd
+
+  - ticker: TMPV
+    tv_symbol: NSE-TMPV
+    company: Tata Motors Passenger Vehicles Ltd
+
+  - ticker: MASTEK
+    tv_symbol: NSE-MASTEK
+    company: Mastek Ltd
+
+  - ticker: MOREPENLAB
+    tv_symbol: NSE-MOREPENLAB
+    company: Morepen Laboratories Ltd
